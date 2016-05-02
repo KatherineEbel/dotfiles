@@ -1,6 +1,7 @@
 set nocompatible 	"Vim behavior, not Vi.
 filetype off
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,6 +16,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
+Plugin 'https://github.com/scrooloose/nerdcommenter'
 call vundle#end()
 filetype plugin indent on
 
@@ -54,7 +57,7 @@ set linespace=2
 set visualbell
 
 " spell checking
-set spell spelllang=en_us
+" setlocal spell spelllang=en_us
 
 "change leader key to <SPACE>
 let mapleader = "\<Space>"
@@ -64,7 +67,7 @@ inoremap jk <ESC>
 nnoremap <leader>f 1z=
 
 " Toggle spelling visuals with <leader>s
-nnoremap <leader>s :set spell!
+nnoremap <leader>s :setlocal spell!
 
 " Delete trailing space
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
