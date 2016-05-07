@@ -1,4 +1,4 @@
-" set nocompatible 	"Vim behavior, not Vi.
+set nocompatible 	"Vim behavior, not Vi.
 filetype off
 
 
@@ -13,12 +13,13 @@ Plugin 'https://github.com/ervandew/supertab'
 Plugin 'https://github.com/scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'https://github.com/scrooloose/nerdcommenter'
 Plugin 'mattn/emmet-vim'
+Plugin 'https://github.com/kien/ctrlp.vim.git'
 call vundle#end()
 filetype plugin indent on
 
