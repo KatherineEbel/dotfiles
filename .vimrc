@@ -1,4 +1,4 @@
-set nocompatible 	"Vim behavior, not Vi.
+" set nocompatible 	"Vim behavior, not Vi.
 filetype off
 
 
@@ -13,11 +13,12 @@ Plugin 'https://github.com/ervandew/supertab'
 Plugin 'https://github.com/scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'https://github.com/scrooloose/nerdcommenter'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -71,3 +72,22 @@ nnoremap <leader>s :setlocal spell!
 
 " Delete trailing space
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+"add powerline fonts
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" enable/disable bufferline integration
+let g:airline#extensions#bufferline#enabled = 1
+
+"enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled = 1
+
+"configure which whitespace check to enable
+let g:airline#extensions#whitepsace#checks = ['indent', 'trailing', 'mixed-indent-file']
+
+"configure the maximum number of lines where whitespace checking is enabled
+let g:airline#extensions#whitespace#max_lines = 500
