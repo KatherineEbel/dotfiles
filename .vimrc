@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 set nocompatible 	"Vim behavior, not Vi.
 filetype off
+=======
+" set nocompatible 	"Vim behavior, not Vi.  filetype off
+>>>>>>> 35f032cd28160ad255dad87a13e4833de7a09ae8
 
 
 " set the runtime path to include Vundle and initialize
@@ -19,7 +23,11 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'https://github.com/scrooloose/nerdcommenter'
 Plugin 'mattn/emmet-vim'
+<<<<<<< HEAD
 Plugin 'https://github.com/kien/ctrlp.vim.git'
+=======
+Plugin 'vim-airline/vim-airline-themes'
+>>>>>>> 35f032cd28160ad255dad87a13e4833de7a09ae8
 call vundle#end()
 filetype plugin indent on
 
@@ -81,6 +89,29 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline theme
+let g:airline_theme = 'badwolf'
+" enable tabline on airline
+let g:airline#extensions#tabline#enabled = 1
 " enable/disable bufferline integration
 let g:airline#extensions#bufferline#enabled = 1
 
@@ -92,3 +123,6 @@ let g:airline#extensions#whitepsace#checks = ['indent', 'trailing', 'mixed-inden
 
 "configure the maximum number of lines where whitespace checking is enabled
 let g:airline#extensions#whitespace#max_lines = 500
+
+"remap defulat <C-Y> leader for emmet
+let g:user_emmet_leader_key='<C-a>'
